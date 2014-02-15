@@ -1,32 +1,38 @@
-<h1>Listing sites</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Url</th>
-      <th>Name</th>
-      <th>Username</th>
-      <th>Logo Url</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<h1>RESET ME</h1>
+<div class="container">
+  <div class="row">
     <% @sites.each do |site| %>
-      <tr>
-        <td><%= site.url %></td>
-        <td><%= site.name %></td>
-        <td><%= site.username %></td>
-        <td><%= site.logo_url %></td>
-        <td><%= link_to 'Show', site %></td>
-        <td><%= link_to 'Edit', edit_site_path(site) %></td>
-        <td><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="offer offer-success">
+          <div class="shape">
+            <div class="shape-text">
+              good
+            </div>
+          </div>
+          <div class="offer-content">
+            <h3 class="lead">
+              <img src="<%= site.logo_url%>" alt="<%= site.name%>" class="img-circle"> 
+              <%= site.name.titleize %>
+            </h3>
+            <p>
+              <strong>username:</strong><em> <%= site.username %></em><br />
+              <strong>password:</strong><em> *******************</em>
+            </p>
+            <p class="options">
+              <a href="<%= site.url %>" target="_blank" class="btn btn-primary btn-lg btn-block">Change Password</a>
+            </p>
+            <p class="options">
+              <%= link_to 'Show', site, :class => "btn btn-xs" %>
+              <%= link_to 'Edit', edit_site_path(site), :class => "btn btn-xs" %>
+              <%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' }, 
+                          :class => "btn btn-xs" %>
+            </p>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
 <br>
 
