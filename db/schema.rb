@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20131110154328) do
     t.string   "url"
     t.string   "name"
     t.string   "username"
+    t.string   "logo_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

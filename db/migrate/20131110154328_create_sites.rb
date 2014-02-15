@@ -4,7 +4,7 @@ class CreateSites < ActiveRecord::Migration
       t.string :url
       t.string :name
       t.string :username
-
+      t.string :logo_url
       t.timestamps
     end
   end
