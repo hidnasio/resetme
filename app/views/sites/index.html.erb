@@ -6,6 +6,7 @@
       <th>Url</th>
       <th>Name</th>
       <th>Username</th>
+      <th>Logo Url</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,6 +19,7 @@
         <td><%= site.url %></td>
         <td><%= site.name %></td>
         <td><%= site.username %></td>
+        <td><%= site.logo_url %></td>
         <td><%= link_to 'Show', site %></td>
         <td><%= link_to 'Edit', edit_site_path(site) %></td>
         <td><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
