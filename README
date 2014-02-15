@@ -1,3 +1,10 @@
 RESETME
 
 Links to reset password pages.
+
+Instructions
+
+You need to set the enviroment variables RESETME_USER and RESETME_PASSWORD
+
+  export RESETME_USER=username
+  export RESETME_PASSWORD=password
