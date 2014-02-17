@@ -8,92 +8,131 @@
 @import "bootstrap/bootstrap";
 
 // Uncomment For glyphicons + asset pipeline.
-//@font-face {
-//  font-family: 'Glyphicons Halflings';
-//    src: asset-url("bootstrap/glyphicons-halflings-regular.eot");
-//    src: asset-url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format('embedded-opentype'),
-//         asset-url("bootstrap/glyphicons-halflings-regular.woff") format('woff'),
-//         asset-url("bootstrap/glyphicons-halflings-regular.ttf") format('truetype'),
-//         asset-url("bootstrap/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format('svg');
-// }
+@font-face {
+  font-family: 'Glyphicons Halflings';
+    src: asset-url("bootstrap/glyphicons-halflings-regular.eot");
+    src: asset-url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format('embedded-opentype'),
+         asset-url("bootstrap/glyphicons-halflings-regular.woff") format('woff'),
+         asset-url("bootstrap/glyphicons-halflings-regular.ttf") format('truetype'),
+         asset-url("bootstrap/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format('svg');
+}
 // see this for more info about glyphicons: https://github.com/jasontorres/bootstrap-on-rails/issues/3
 
+body{
+  background-image: url('/images/tree_bark.png');
+}
+
 .shape{    
-  border-style: solid; border-width: 0 70px 40px 0; float:right; height: 0px; width: 0px;
+  border-style: solid; 
+  border-width: 0 70px 40px 0; 
+  float:right; 
+  height: 0px; 
+  width: 0px;
   -ms-transform:rotate(360deg); /* IE 9 */
   -o-transform: rotate(360deg);  /* Opera 10.5 */
   -webkit-transform:rotate(360deg); /* Safari and Chrome */
-transform:rotate(360deg);
+  transform:rotate(360deg);
 }
+
 .offer{
-background:#fff; border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;
+  background:#fff; 
+  border:1px solid #ddd; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+  margin: 15px 0; 
+  overflow:hidden;
 }
+
 .shape {
   border-color: rgba(255,255,255,0) #d9534f rgba(255,255,255,0) rgba(255,255,255,0);
 }
+
 .offer-radius{
   border-radius:7px;
 }
+
 .offer-danger { border-color: #d9534f; }
+
 .offer-danger .shape{
   border-color: transparent #d9534f transparent transparent;
 }
+
 .offer-success {  border-color: #5cb85c; }
+
 .offer-success .shape{
   border-color: transparent #5cb85c transparent transparent;
 }
+
 .offer-default {  border-color: #999999; }
+
 .offer-default .shape{
   border-color: transparent #999999 transparent transparent;
 }
+
 .offer-primary {  border-color: #428bca; }
+
 .offer-primary .shape{
   border-color: transparent #428bca transparent transparent;
 }
+
 .offer-info { border-color: #5bc0de; }
+
 .offer-info .shape{
   border-color: transparent #5bc0de transparent transparent;
 }
+
 .offer-warning {  border-color: #f0ad4e; }
+
 .offer-warning .shape{
   border-color: transparent #f0ad4e transparent transparent;
 }
 
 .shape-text{
-color:#fff; font-size:12px; font-weight:bold; position:relative; right:-40px; top:2px; white-space: nowrap;
-      -ms-transform:rotate(30deg); /* IE 9 */
-      -o-transform: rotate(360deg);  /* Opera 10.5 */
-      -webkit-transform:rotate(30deg); /* Safari and Chrome */
-transform:rotate(30deg);
+  color:#fff; 
+  font-size:12px; 
+  font-weight:bold; 
+  position:relative; 
+  right:-40px; 
+  top:2px; 
+  white-space: nowrap;
+  -ms-transform:rotate(30deg); /* IE 9 */
+  -o-transform: rotate(360deg);  /* Opera 10.5 */
+  -webkit-transform:rotate(30deg); /* Safari and Chrome */
+  transform:rotate(30deg);
 } 
+
 .offer-content{
-padding:0 20px 10px;
+  padding:0 20px 10px;
 }
+
 .offer-content .lead{
   width:100%;
   overflow:hidden;
 }
+
 .offer-content .options{
   text-align:center;
 }
+
 .offer-content .lead img{
   max-width:53px;
   height:53px;
 }
+
 @media (min-width: 487px) {
   .container {
     max-width: 750px;
   }
   .col-sm-6 {
-width: 50%;
+    width: 50%;
   }
 }
+
 @media (min-width: 900px) {
   .container {
     max-width: 970px;
   }
   .col-md-4 {
-width: 33.33333333333333%;
+    width: 33.33333333333333%;
   }
 }
 
@@ -102,9 +141,41 @@ width: 33.33333333333333%;
     max-width: 1170px;
   }
   .col-lg-3 {
-width: 25%;
+    width: 25%;
   }
 }
 
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  margin-top:15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+}
 
-/* custom style */
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+.btn-circle .glyphicon {
+  line-height: 1.3;
+}
+

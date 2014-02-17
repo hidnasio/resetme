@@ -1,4 +1,15 @@
-<h1>RESET ME</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>RESET ME</h1>
+    </div>
+    <div class="col-md-8" style="text-align:right">
+      <%= link_to raw('<i class="glyphicon glyphicon-plus"></i>'), new_site_path, :class => 'btn btn-success btn-circle btn-lg' %>
+      <button type="button" class="btn btn-primary btn-circle btn-lg" onclick="javascript:alert('no funca')"><i class="glyphicon glyphicon-list"></i></button>
+      <button type="button" class="btn btn-default btn-circle btn-lg" onclick="javascript:alert('no funca')"><i class="glyphicon glyphicon-log-out"></i></button>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="row">
     <% @sites.each do |site| %>
@@ -36,4 +47,3 @@
 
 <br>
 
-<%= link_to 'New Site', new_site_path %>
