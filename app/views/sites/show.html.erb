@@ -21,5 +21,10 @@
   <%= @site.logo_url %>
 </p>
 
+<p>
+  <strong>Age</strong>
+  <%= time_ago_in_words(@site.reset_at.to_time) %>
+</p>
+
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>

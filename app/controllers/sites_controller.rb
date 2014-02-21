@@ -1,5 +1,5 @@
 class SitesController < ApplicationController
-  before_action :set_site, only: [:show, :edit, :update, :destroy]
+  before_action :set_site, only: [:show, :edit, :update, :destroy, :reset]
 
   # GET /sites
   # GET /sites.json
@@ -55,6 +55,14 @@ class SitesController < ApplicationController
   # DELETE /sites/1.json
   def destroy
     @site.destroy
+    respond_to do |format|
+      format.html { redirect_to sites_url }
+      format.json { head :no_content }
+    end
+  end
+
+  def reset
+    @site.reset_timer!
     respond_to do |format|
       format.html { redirect_to sites_url }
       format.json { head :no_content }
